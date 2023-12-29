@@ -1,0 +1,51 @@
+
+h1 {
+	color: #35A29F;
+	font-family: 'Patua One', cursive;
+	margin-top: 10%;
+}
+
+h3 {
+	color: red;
+	margin: 4% auto;
+}
+
+p {
+	color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Form Section */
+#form-section {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.form-control {
+	margin-bottom: 4%;
+	border-radius: 30px;
+	border-color: #35A29F;
+}
+
+input.btn {
+	color: white;
+	background-color: #35A29F;
+    border-radius: 10px;
+}
+
+input.btn:hover {
+	color: white;
+	background-color: black;
+	border: none;
+}
+
+@media (max-width: 500px) {
+    /** Form Section **/
+    #form-section {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}

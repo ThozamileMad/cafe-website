@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.html" %}
+    <link rel="stylesheet" href="static/add-cafe-styles.css">
+  </head>
+  <body>
+    {% import "bootstrap/wtf.html" as wtf %}
+
+    <section id="title-section">
+      <nav>
+        <div class="title-div">
+          <a class="title" href="/"> MadCafe's </a>
+        </div>
+      </nav>
+    </section>
+
+    <section id="form-section">
+      {% include "form.html" %}
+    </section>
+  </body>
+</html

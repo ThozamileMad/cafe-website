@@ -1,0 +1,237 @@
+:root {
+  --color1: #AA8B56;
+  --color2: white;
+}
+
+p {
+  color: grey;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  color: var(--color1);
+  margin-bottom: 4%;
+}
+
+h3 {
+  color: red;
+}
+
+/* Multi Selector Rules */
+
+h2, h3, form, .img-p, .add-p, .footer-p, .title-text, .last-p {
+  text-align: center;
+}
+
+input.btn:hover, #title-section {
+  background-color: var(--color1);
+}
+
+input.btn, input.btn:hover, #title-section, .navbar-brand, .navbar-brand:hover, .title-text.p, .delete-button:hover {
+  color: var(--color2);
+}
+
+.navbar-nav, input.btn, .delete-button, .display-icon img {
+  position: relative;
+}
+
+
+form, #title-section {
+  margin-bottom: 5%;
+}
+
+/* Search Form */
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-control {
+  width: 300px;
+  border-color: black;
+}
+
+input.btn {
+  background-color: black;
+  margin: 25px 0 0 5px;
+}
+
+/* Title Section */
+
+.bg-body-tertiary {
+  background-color: transparent!important;
+  padding: 8px 30px;
+}
+
+.navbar-collapse {
+  justify-content: end;
+}
+
+.title-text {
+  font-family: 'Dancing Script', cursive;
+}
+
+.navbar-brand {
+  font-size: 50px;
+}
+
+.btn-dark:hover {
+  background-color: white;
+  color: black;
+  border-color: white;
+}
+
+.title-text.h {
+  font-size: 80px;
+}
+
+.title-text.p {
+  font-size: 60px;
+}
+
+.title-img {
+  width: 10%;
+}
+
+/** Main Section **/
+
+#main-section {
+  font-family: 'Patua One', cursive;
+}
+
+.main-img {
+  width: 120%;
+  border-radius: 15px;
+}
+
+.delete-button {
+  left: 11%;
+  top: 2%;
+}
+
+.delete-button:hover {
+  background-color: #FE0000;
+}
+
+.img-p {
+  margin: 10% auto;
+}
+
+.img-p img {
+  width: 3%;
+}
+
+.display-grid {
+  text-align: left;
+  padding-left: 20%;
+}
+
+.location {
+  margin-top: 16px;
+}
+
+.main-a {
+  text-decoration: none;
+  margin-bottom: 16px;
+  word-break: break-word;
+}
+
+
+.display-icon img {
+  width: 7%;
+  bottom: 2px;
+}
+
+.add-img {
+  width: 15%;
+  margin: 5% auto;
+}
+
+footer {
+  margin-top: 5%;
+}
+
+footer img {
+  width: 12%;
+  margin: auto 10px 50px 10px;
+}
+
+.last-p {
+  font-family: none;
+}
+
+
+/** Phone Media Query **/
+@media only screen and (max-width: 720px) {
+    p {
+      padding-right: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+    }
+
+    /** Title Section **/
+
+    .navbar-brand {
+      font-size: 30px;
+    }
+
+    .navbar-nav {
+      display: flex!Important;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .title-text.h {
+      font-size: 60px;
+    }
+
+    .title-text.p {
+      font-size: 40px;
+      padding: 0 30px;
+    }
+
+    /** Main Section **/
+
+
+    .main-img {
+      width: 90%;
+    }
+
+    .delete-button {
+      left: 0;
+    }
+
+    .display-grid {
+      padding: 5% 5% 0;
+      text-align: center;
+    }
+
+    .grid-text {
+      margin: 7% auto;
+    }
+
+    .img-p {
+      margin: 20% auto;
+    }
+
+    .img-p img {
+      width: 6%;
+    }
+
+    footer img {
+      width: 17%;
+      margin: auto 10px 30px 10px;
+    }
+
+    .last-p {
+      padding-right: 0;
+    }
+}

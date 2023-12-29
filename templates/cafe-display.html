@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+    <section id="main-section">
+      {% with messages = get_flashed_messages() %}
+        {% if messages: %}
+          <h3> {{ messages[0] }} </h3>
+        {% endif %}
+      {% endwith %}
+      {{ wtf.quick_form(form, novalidate=True) }}
+      {{ wtf.form_errors(form, hiddens="only") }}
+
+      {% for data in cafe_data: %}
+        <h2> {{ data["name"] }} </h2>
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6">
+              <img class="main-img" src="{{ data['img_url'] }}">
+              {% if logged_in: %}
+                <a class="title-b btn btn-dark delete-button" href="{{ url_for('delete_cafe', cafe_id=data['id']) }}" role="button"> <i class="fa-solid fa-trash"></i> Delete Cafe </a>
+              {% endif %}
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 display-grid">
+              {% for data2 in data["display_data"]: %}
+                {% for key in data2: %}
+                  <div class="grid-text">
+                    <h4 class="{{ key.lower() }}" > {{ key }} <span class="display-icon"> <img src="{{ data2[key][1] }}"> </span> </h4>
+                    {% if data2[key][0] == 1: %}
+                      <p> Yes </p>
+                    {% elif data2[key][0] == 0: %}
+                      <p> No </p>
+                    {% elif key == "Map": %}
+                      <a class="main-a" href="{{ data2[key][0] }} "> {{ data2[key][0] }} </a>
+                    {% else %}
+                      <p> {{ data2[key][0] }} </p>
+                    {% endif %}
+                  </div>
+                {% endfor %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {% if data["name"] != last_cafe_name: %}
+          <p class="img-p">
+            <img src="https://cdn-icons-png.flaticon.com/512/818/818217.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/818/818142.png">
+            <img src="https://cdn-icons-png.flaticon.com/512/818/818217.png">
+          </p>
+        {% elif logged_in: %}
+          <a href="{{ url_for('add_cafe') }}">
+            <p class="add-p">
+              <img class="add-img" src="https://cdn-icons-png.flaticon.com/512/992/992651.png">
+            </p>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </section>
+  </body>
+</html>

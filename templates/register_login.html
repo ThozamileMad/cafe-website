@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include "head.html" %}
+    <link href="static/register-login-styles.css" rel="stylesheet" ><link>
+  </head>
+  <body>
+    {% import "bootstrap/wtf.html" as wtf %}
+
+    <section id="title-section">
+      <nav>
+        <div></div>
+        <a class="title" href="/"> MadCafe's </a>
+        <a class="title-b btn btn-dark" href="{{ url }}" role="button"> {{ anchor_text }} </a>
+      </nav>
+    </section>
+
+    <section id="form-section">
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-lg-6">
+            {% include "form.html" %}
+              {% if include_forgot_pass: %}
+                <a href="{{ url_for('forgot_password') }}" class="forgot-password-a"> Forgot Password </a>
+              {% endif %}
+          </div>
+          <div class="col-lg-6">
+            <img class="form-img" src="{{ icon }}">
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

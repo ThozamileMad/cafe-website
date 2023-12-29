@@ -1,0 +1,74 @@
+:root {
+  --color1: #AA8B56
+}
+
+h1 {
+  color: var(--color1);
+  font-family: 'Patua One', cursive;
+}
+
+h3 {
+  margin: 4% auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Multi Selector Rules */
+h3, p {
+  color: red;
+}
+
+#title-section, input.btn {
+  background-color: var(--color1);
+}
+
+.title, input.btn, input.btn:hover {
+  color: white;
+}
+
+/* Title Section */
+#title-section {
+  margin-bottom: 80px;
+}
+
+.title-div {
+  text-align: center;
+}
+
+.title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 280%;
+}
+
+/* Form Section */
+#form-section {
+  padding: 0 20%;
+}
+
+.form-control {
+  margin-bottom: 4%;
+  border-radius: 30px;
+  border-color: var(--color1);
+}
+
+input.btn {
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+input.btn:hover {
+  background-color: black;
+}
+
+.checkbox {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 500px) {
+  /* Form Section */
+  #sockets {
+    margin-top: 15px;
+  }
+}

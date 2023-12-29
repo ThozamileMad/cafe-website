@@ -1,0 +1,22 @@
+
+.navigation-bar {
+    text-align: center;
+    background-color: #35A29F;
+    height: 50px;
+    padding-top: 5px;
+    font-size: x-large;
+}
+
+.navbar-title {
+    color: white;
+    text-decoration: none;
+    font-family: 'Merriweather', serif;
+}
+
+.title-img {
+    width: 2.5%;
+}
+
+.logout {
+    background-color: black;
+}
